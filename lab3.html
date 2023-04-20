@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>My first map_lab2</title>
+  <title>My first map_lab3</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
@@ -48,6 +48,14 @@
     });
 
     layer.bringToFront();
+}
+	  
+	  function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
+	  
+	  function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
 }
 
 
